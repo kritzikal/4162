@@ -9,7 +9,7 @@ timestamps = (data[0] - data[0, 0]) / 1000
 accel_data = data[1:4]
 gyro_data = data[4:-1]
 
-
+#find all peaks above threshold and saves certain peaks within a tolerance range 
 def peak_detection(t, sig, thresh, tol = 1):
     peaks = []
     max_val = -np.inf
@@ -20,12 +20,11 @@ def peak_detection(t, sig, thresh, tol = 1):
             if sig[i] > max_val:
                 max_val = sig[i]
                 position = t[i]
-        #check if signal drops sigificantly
+        #check if signal drop significantly
         if max_val > thresh and sig[i] < max_val - tol:
             peaks.append((position, max_val))
             max_val = -np.inf
 
-    #peaks.append((position, max_val))
     return np.array(peaks)
 
 
@@ -37,4 +36,3 @@ plt.xlabel("Time")
 plt.ylabel("Meters per second")
 plt.scatter(max_peaks[:, 0], max_peaks[:, 1], color='red')
 plt.show()
-print(accel_data[0].max())
