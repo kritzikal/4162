@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'be.tarsos.dsp.android'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 24
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    api project(':TarsosDSP:core')
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/frequencyTextA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frequency A: 1 Hz"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp" />
+
+    <SeekBar
+        android:id="@+id/frequencySeekBarA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:progress="1" />
+
+    <TextView
+        android:id="@+id/frequencyTextB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frequency B: 1 Hz"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <SeekBar
+        android:id="@+id/frequencySeekBarB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:progress="1" />
+
+    <View
+        android:id="@+id/sineWaveView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="16dp"
+        android:background="#DDDDDD" />
+
+    <View
+        android:id="@+id/cosWaveView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="16dp"
+        android:background="#DDDDDD" />
+
+    <View
+        android:id="@+id/CircularConvolutionView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="16dp"
+        android:background="#DDDDDD" />
+
+</LinearLayout>
